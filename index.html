@@ -14,7 +14,11 @@
    
   <body>
        <style>
-              .dropdown .btn{background:red}
+              .dropdown .btn
+              {background:red
+              }
+              
+              
           .but a{text-align:center;
            margin-left:6%;
            border-radius:10px;
@@ -22,40 +26,18 @@
            background:blue;
            color:white;
            } 
+           
            body{
-           background: radial-gradient(ellipse at right bottom, pink 5%, #d42dab 25%, #4d1d63 40%, #030243 45%);
-           
-           
-           
-           
-           
-           /* radial-gradient(ellipse at right bottom, #EEB1BF 56%, #d42dab 25%,#4d1d63 70%, #030243 10%);
-            url("https://img.myloview.com/stickers/abstract-light-blue-fractal-wave-design-space-wallpaper-pattern-backdrop-technology-science-black-concept-texture-element-motion-illustration-effect-composition-dynamic-arrangemen-400-306094968.jpg");*/
-           //background-attachment: fixed;
+           background: black;
           background:cover;
-           /*radial-gradient(ellipse at right bottom, #EEB1BF 5%, #d42dab 25%, #4d1d63 50%, #030243 100%);
-           */
-           
-           
-           
-         
 		font-family: "Open Sans";
-		font-size: 1.25rem  ;
-           
-           
- margin-left:15px ;
+		font-size: 1.25rem  ;           
+        margin-left:15px ;
+        }
  
- 
- }
            
-           } 
-           /*.fl{
-                display:inline;
-               // float:left;
-           } 
-          .fl .flo{
-                float:left;
-           } */
+            
+         
            .dp{
                 display:inline;
                 float:right;
@@ -67,7 +49,6 @@
            }
              .logoo img {width: 8%;
          margin-top: 5px;
-        // margin:2px;
          border-radius:100px;
          margin-left:5px;
           text-align:center; 
@@ -76,66 +57,23 @@
             <div class="fl"> 
                  <div class="flo">
        <div class="but p-2 g-col-6">
-    <a href="index.html"> &nbsp &nbspView 📥 </a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2Zz2a6PjchzaeTKzu6qBuPHuZNpraIDCCw6gGwMtoqn2qvA/viewform?usp=sf_link"> &nbsp &nbspView 📥 </a>
     <a href="message.html">&nbsp Message📤&nbsp </a>
-    
-    
-    <!-- 
-    <div class="dropdown-center dp">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-   SMS
-  </button>
-  <ul class="dropdown-menu">
-    <li><iframe style="padding:-50%;" src="message.html" height="300px" >Loading…</iframe>
-  </li>
-  </ul>
-</div>
-
- -->
-      <!-- 
-      
-      card text-bg-primary mb-3 card-header
-      <h5 class="card-title">Best broker app for fast trade </h5>
-    <p class="card-text"><a href="https://www.5paisa.com/landing/partners-elite?rcode=NTM3NzM4NDY">Open new demat account</a></p>
-  </div>
-</div>
-<div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-  <div class="card-header">Dhan </div>
-  <div class="card-body">
-    <h5 class="card-title"> ₹0 Demat Account Fees ₹0 AMC | ₹10 for Intraday for women investor </h5>
-      
-       -->
-
-
-   
-    
     </div>
-   <!--   <br>
-    <br>
-    <br><br>
-    <br>
-    <br><br><br>
-    <br>
-     -->
-    
-    <br>
-    
    
-         
-   
-    
-    
+    <br>
     <div id="content"></div>
-    </div>
+
     <div class="flo">
+    
     <script>
-  const sheet_id = "10OjNr12C49lXoYCgjjSLtTdJraksh6si4a8tdbtChQs";
+  const sheet_id = "1tg5bUHqHCHUSvodVVAMhjCuUKeHmBRuoalnHCDtOvpc";
   fetch(`https://docs.google.com/spreadsheets/d/${sheet_id}/export?format=tsv`)
     .then(response => response.text())
     .then(txt => {
       const sheet = txt.split("\r\n").map(r => r.split('\t'));
       let html = `<table class="table table-striped">`;
-      html += `<thead><tr><th>Date & time </th><th>Name</th><th>number</th><th>budget</th><th>location</th><th>requirements</th><th>source</th></tr></thead>`;
+      html += `<thead style="color:yellow;" ><tr><th>Date & time </th><th>Name</th><th>number</th><th> approved </th><th>location</th><th> pg flats details </th><th>source link</th><th>whatsapp</th></tr></thead>`;
       html += `<tbody>`;
       for (let i = sheet.length - 1; i > 0; i--) {
         html += `<style>p{color:;} 
@@ -153,7 +91,7 @@
            background: white;
       }
               </style>
-         <div style="color:white;" class="box  border-info card text-bg-light mb-1 ">
+        
         <tr>   <td style="color:white;">${sheet[i][0]}</td>
           <td style="color:white; background: ;">${sheet[i][1]}</td>
        
@@ -162,7 +100,11 @@
           <td style="color:white;" >${sheet[i][4]}</td>
           <td style="color:white;" >${sheet[i][5]}</td>
           <td style="color:white;" >${sheet[i][6]}</td>
-        </tr> <div>`;
+           <td>
+                <a href="https://api.whatsapp.com/send?phone={ sheet[i][2] }&text=thank you for using traderharish" target="_blank">message WhatsApp</a>
+            </td>
+
+        </tr> `;
       }
       html += `</tbody></table>`;
       document.querySelector("div#content").innerHTML = html;
@@ -177,21 +119,7 @@
      <hr>
    <h4 style="color:white;">  Developed By Harish bairagi<br><a style="background:red;color:white;border-radius:25px; text-decoration:none;" href="https://wa.me/918764470753?text=">&nbsp Hire me &nbsp</a> 
    
-   <div class="logoo">
-        <a href="https://wa.me/+918764470753?text=">
-             <img src="https://www.unipile.com/wp-content/uploads/2022/02/icone-logo-whatsapp-vert.png" alt="">
-        </a>
-        
-        <a href="https://www.linkedin.com/in/harishbairagi56">
-             <img src="https://www.unipile.com/wp-content/uploads/2022/09/logo-linkedin-1.png" alt="">
-        </a>
-        
-        
-        <a href="https://www.instagram.com/harish.56q/">
-             <img src="https://www.unipile.com/wp-content/uploads/2022/09/logo_instagram.png" alt="">
-        </a>
-        </h4>
-   </div>
+
    
    
     </div>
@@ -199,6 +127,3 @@
   
    
 </html>
-
-
-
