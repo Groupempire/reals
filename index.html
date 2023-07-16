@@ -73,7 +73,7 @@
     .then(txt => {
       const sheet = txt.split("\r\n").map(r => r.split('\t'));
       let html = `<table class="table table-striped">`;
-      html += `<thead style="color:yellow;" ><tr><th>Date & time </th><th>Name</th><th>number</th><th> approved </th><th>location</th><th> pg flats details </th><th>source link</th><th>whatsapp</th></tr></thead>`;
+      html += `<thead style="color:yellow;" ><tr><th> time </th><th>Name</th><th>number</th><th> approved </th><th>location</th><th> pg flats details </th><th>source link</th><th>whatsapp</th></tr></thead>`;
       html += `<tbody>`;
       for (let i = sheet.length - 1; i > 0; i--) {
         html += `<style>p{color:;} 
