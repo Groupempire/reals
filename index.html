@@ -67,13 +67,13 @@
     <div class="flo">
     
     <script>
-  const sheet_id = "1tg5bUHqHCHUSvodVVAMhjCuUKeHmBRuoalnHCDtOvpc";
+  const sheet_id = "1Hv8JM-Qh1wUEGpdVfhu_s_g-6wLiykbs9ZwzU2RZjl0";
   fetch(`https://docs.google.com/spreadsheets/d/${sheet_id}/export?format=tsv`)
     .then(response => response.text())
     .then(txt => {
       const sheet = txt.split("\r\n").map(r => r.split('\t'));
       let html = `<table class="table table-striped">`;
-      html += `<thead style="color:yellow;" ><tr><th>Date & time </th><th>Name</th><th>number</th><th> approved </th><th>location</th><th> pg flats details </th><th>source link</th><th>whatsapp</th></tr></thead>`;
+      html += `<thead style="color:yellow;" ><tr><th> time </th><th>Name</th><th>number</th><th> approved </th><th>location</th><th> pg flats details </th><th>source link</th><th>whatsapp</th></tr></thead>`;
       html += `<tbody>`;
       for (let i = sheet.length - 1; i > 0; i--) {
         html += `<style>p{color:;} 
@@ -95,14 +95,13 @@
         <tr>   <td style="color:white;">${sheet[i][0]}</td>
           <td style="color:white; background: ;">${sheet[i][1]}</td>
        
-          <td style="color:white;"><a href="callto:${sheet[i][2]}">${sheet[i][2]}</a></td>
-
+          <td style="color:white;" >${sheet[i][2]}</td>
           <td style="color:white;">${sheet[i][3]}</td>
           <td style="color:white;" >${sheet[i][4]}</td>
           <td style="color:white;" >${sheet[i][5]}</td>
           <td style="color:white;" >${sheet[i][6]}</td>
-          <td>
-    <a href="https://api.whatsapp.com/send?phone=${sheet[i][2]}&text=thank%20you%20for%20using%20traderharish" target="_blank">message WhatsApp</a>
+           <td>
+    <a href="https://api.whatsapp.com/send?phone=${sheet[i][2]}&text=hi" target="_blank">message WhatsApp</a>
 </td>
 
 
